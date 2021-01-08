@@ -28,7 +28,7 @@ entity adder_decoder is
 			
         );
 end adder_decoder;
-
+-- 3rd comment
 architecture rtl of adder_decoder is
 
 signal s_sum : std_logic_vector(8 downto 0);
