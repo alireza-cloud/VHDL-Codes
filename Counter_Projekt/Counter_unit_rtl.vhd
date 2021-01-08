@@ -154,3 +154,6 @@ architecture rtl of cntr is
 			cntr_3_o <= v_count_3;
 		end process;
 end rtl;
+-- nothing new
+									
+									
