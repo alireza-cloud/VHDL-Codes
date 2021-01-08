@@ -155,5 +155,6 @@ architecture rtl of cntr is
 		end process;
 end rtl;
 -- nothing new
+-- just checking
 									
 									
