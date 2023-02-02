@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Design: Assignment_1 : adder_decoder design testbench			         --
 --                                                                           --
--- Author : Ali Reza Noori                                    				 --
+-- Author : It's me                                				 --
 -- Date   : 27 11 2020                                                       --
 -- File   : tb_adder_decoder.vhd                                             --
 -------------------------------------------------------------------------------
