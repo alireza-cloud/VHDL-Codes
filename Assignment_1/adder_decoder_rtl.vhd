@@ -1,7 +1,7 @@
 -------------------------------------------------------------------------------
 -- Design: Assignment_1 : adder_decoder design entity and architecture                     --
 --                                                                           --
--- Author : Ali Reza Noori *done in a group of three*                        --
+-- Author : It's me                      --
 -- Date   : 27 11 2020                                                       --
 -- File   : adder_decoder_rtl.vhd                                                     --
 -------------------------------------------------------------------------------
