@@ -17,19 +17,19 @@ entity ambient_light_sensor is
     port(
         sys_clock         	:   in      std_logic;   					-- 100 MHz system clock
         reset_asyn     		:   in      std_logic;  					--Asynchronous Reset with active low function
-		enable				:   in      std_logic;						-- the enable switch = 1 allows the transaction, enable = 0 holds the last value
+		enable		:   in      std_logic;						-- the enable switch = 1 allows the transaction, enable = 0 holds the last value
         miso        		:   in      std_logic;   					--Master in Slave out pin
         sclk        		:   buffer  std_logic;     					--Serial Clock for the ALS PMOD Sensor
-        cs        			:   buffer  std_logic;     					--Chip select pin of the ALS PMOD
-        leds    			:   out     std_logic_vector(7 downto 0));  -- output leds 
+        cs        		:   buffer  std_logic;     					--Chip select pin of the ALS PMOD
+        leds    		:   out     std_logic_vector(7 downto 0));  -- output leds 
 		
 end ambient_light_sensor;
 
 architecture behavior of ambient_light_sensor is
-    signal spi_rx_data       : std_logic_vector(15 downto 0);   					 -- data received by the SPI_Master
-	signal s_pwm_cnt		 : std_logic_vector(7 downto 0) := (others => '0');		 -- Signal to generate PWM
-	signal s_pwm_cnt_toggle	 : std_logic := '0';									 -- Signal to toggle the Counter for the Serial Clock 
-	signal enable_leds		 : std_logic;											 -- Enable Output LEDs 
+    signal spi_rx_data			: std_logic_vector(15 downto 0);   					 -- data received by the SPI_Master
+	signal s_pwm_cnt		: std_logic_vector(7 downto 0) := (others => '0');		 -- Signal to generate PWM
+	signal s_pwm_cnt_toggle		: std_logic := '0';									 -- Signal to toggle the Counter for the Serial Clock 
+	signal enable_leds		: std_logic;											 -- Enable Output LEDs 
 
 
     -- Component Declaration
@@ -40,12 +40,12 @@ architecture behavior of ambient_light_sensor is
             sys_clock   		: in     std_logic;                             
             reset_asyn 			: in     std_logic;                             
             enable  			: in     std_logic;                             
-            clockPolarity    	: in     std_logic;                             
+            clockPolarity    		: in     std_logic;                             
             clockPhase    		: in     std_logic;                             
-            ClockDivider 			: in     integer;                               
+            ClockDivider 		: in     integer;                               
             miso    			: in     std_logic;                             
             sclk    			: buffer std_logic;                             
-            cs    				: buffer std_logic;   
+            cs    			: buffer std_logic;   
             rx_data 			: out    std_logic_vector(data_width-1 downto 0)); 
     end component spi_master;
 
@@ -88,53 +88,3 @@ begin
 	leds(7) <= not enable_leds;
 	
 end behavior;
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
---
